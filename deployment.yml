@@ -1,0 +1,20 @@
+piVersion: apps/v1
+kind: Deployment
+metedata:
+  name: onlinewebsite-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: online-website
+  template:
+    metadata:
+      labels:
+       app: online-website
+    spec:
+      containers:
+      - name: online-website-container
+        image: rahrthr12/devops-online-website
+        ports:
+          - name: online-website-ports
+            containerPort: 4200
