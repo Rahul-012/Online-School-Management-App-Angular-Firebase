@@ -22,5 +22,5 @@ RUN ls
 RUN ng new SMA
 WORKDIR "/mean/SMA"
 EXPOSE 4200
-ENTRYPOINT ng serve
+ENTRYPOINT ng serve --host 0.0.0.0
 
