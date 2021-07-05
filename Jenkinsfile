@@ -8,7 +8,7 @@ node {
        
         //building the docker image
         stage('Build Docker Image'){     
-              sh 'docker image build . -t devops-online-website'      
+              sh 'docker image build . -t rahrthr12/devops-online-website'      
         }
         
         //push the image to docker hub
