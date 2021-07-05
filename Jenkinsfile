@@ -1,20 +1,16 @@
 node {
     agent any
     
-    stages {
         //get the code form SCM
         stage('SCM') {
-            steps {
+          
                 // Get some code from a GitHub repository
                 git 'https://github.com/Rahul-012/Online-School-Management-App-Angular-Firebase.git'
-            }
         }
        
         //building the docker image
-        stage('Build Docker Image'){
-          steps{
-              sh 'docker image build . -t devops-online-website'
-          }
+        stage('Build Docker Image'){     
+              sh 'docker image build . -t devops-online-website'      
         }
         
         //push the image to docker hub
@@ -50,8 +46,7 @@ node {
             }
             catch(ex){
             sh 'kubectl apply -f service.yml'
-            }
-        
-      }
-    }
+            }        
+          }
+    
 }
