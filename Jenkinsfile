@@ -1,6 +1,8 @@
 node {
     agent any
-    
+    def a = load('a.groovy')
+    echo("${env.BUILD_NUMBER}")
+    echo("${a.LOADED_BUILD_NUMBER}")
         //get the code form SCM
         stage('SCM') {
           
