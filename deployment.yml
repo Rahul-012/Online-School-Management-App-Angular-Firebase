@@ -13,8 +13,8 @@ spec:
        app: online-website
     spec:
       containers:
-      - name: online-website-container
+      - name: devops
         image: rahrthr12/devops-online-website
         ports:
-          - name: online-website-ports
+          - name: online
             containerPort: 4200
