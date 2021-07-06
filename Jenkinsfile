@@ -42,9 +42,9 @@ node {
             try{
             sh 'kubectl create -f service.yml'
             }
-            catch(ex){
-            sh 'kubectl apply -f service.yml'
-            }        
+         //   catch(ex){
+       //     sh 'kubectl apply -f service.yml'
+       //     }        
           }
     
 }
