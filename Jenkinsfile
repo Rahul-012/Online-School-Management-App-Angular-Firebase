@@ -40,11 +40,11 @@ node {
       // deploy service kubernetes cluster
         stage('deploy it to kubernetes cluster') {
             try{
-            sh 'kubectl create -f service.yml'
+              sh 'kubectl create -f service.yml'
             }
-         //   catch(ex){
-       //     sh 'kubectl apply -f service.yml'
-       //     }        
+            catch(ex){
+            sh 'kubectl apply -f service.yml'
+            }        
           }
     
 }
