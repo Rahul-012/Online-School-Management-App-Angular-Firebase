@@ -11,7 +11,6 @@ spec:
   - name: online-website-service-port
     protocol: TCP
     port: 4200
-    targetPort: 3000
+    targetPort: 4200
     # If you set the `spec.type` field to `NodePort` and you want a specific port number,
     # you can specify a value in the `spec.ports[*].nodePort` field.
-    nodePort:  32100
